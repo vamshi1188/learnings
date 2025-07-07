@@ -2,6 +2,7 @@ package main
 
 import (
 	"femproject/internal/app"
+	"femproject/internal/routes"
 	"flag"
 	"fmt"
 	"net/http"
@@ -21,12 +22,14 @@ func main() {
 
 		panic(err)
 	}
+
 	app.Logger.Printf("we are runnig on %d\n", port)
 
-	http.HandleFunc("/healthcheck", Healthcheck)
+	r := routes.SetupRoutes(app)
 
 	server := &http.Server{
 		Addr:         fmt.Sprintf(":%d", port),
+		Handler:      r,
 		IdleTimeout:  time.Minute,
 		ReadTimeout:  10 * time.Second,
 		WriteTimeout: 30 * time.Second,
@@ -37,8 +40,4 @@ func main() {
 
 		app.Logger.Fatal(err)
 	}
-}
-
-func Healthcheck(w http.ResponseWriter, r *http.Request) {
-	fmt.Fprintf(w, "status is available\n")
 }
