@@ -1,7 +1,10 @@
 package app
 
 import (
+	"database/sql"
 	"femproject/internal/api"
+	"femproject/internal/migrations"
+	"femproject/internal/stores"
 	"fmt"
 	"log"
 	"net/http"
@@ -11,9 +14,21 @@ import (
 type Application struct {
 	Logger         log.Logger
 	WorkoutHandler *api.WorkoutHandler
+	DB             *sql.DB
 }
 
 func NewApplication() (*Application, error) {
+
+	pgDB, err := stores.Open()
+	if err != nil {
+
+		return nil, err
+	}
+
+	err = stores.MigrateFS(pgDB, migrations.FS, ".")
+	if err != nil {
+		panic(err)
+	}
 
 	loggers := log.New(os.Stdout, "", log.Ldate|log.Ltime)
 
@@ -22,6 +37,7 @@ func NewApplication() (*Application, error) {
 	app := &Application{
 		Logger:         *loggers,
 		WorkoutHandler: workouthanler,
+		DB:             pgDB,
 	}
 
 	return app, nil

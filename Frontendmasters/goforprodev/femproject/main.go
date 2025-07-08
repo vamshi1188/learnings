@@ -5,6 +5,7 @@ import (
 	"femproject/internal/routes"
 	"flag"
 	"fmt"
+
 	"net/http"
 	"time"
 )
@@ -22,6 +23,8 @@ func main() {
 
 		panic(err)
 	}
+
+	defer app.DB.Close()
 
 	app.Logger.Printf("we are runnig on %d\n", port)
 
