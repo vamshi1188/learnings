@@ -1,6 +1,7 @@
 package app
 
 import (
+	"femproject/internal/api"
 	"fmt"
 	"log"
 	"net/http"
@@ -8,15 +9,19 @@ import (
 )
 
 type Application struct {
-	Logger log.Logger
+	Logger         log.Logger
+	WorkoutHandler *api.WorkoutHandler
 }
 
 func NewApplication() (*Application, error) {
 
 	loggers := log.New(os.Stdout, "", log.Ldate|log.Ltime)
 
+	workouthanler := api.NewWorkoutHandler()
+
 	app := &Application{
-		Logger: *loggers,
+		Logger:         *loggers,
+		WorkoutHandler: workouthanler,
 	}
 
 	return app, nil
