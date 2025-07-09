@@ -35,8 +35,8 @@ type WorkoutStore interface {
 	CreateWorkout(*Workout) (*Workout, error)
 	GetWorkoutByID(id int64) (*Workout, error)
 	UpdateWorkout(*Workout) error
-	DeleteWorkout(id int64) error
-	GetWorkoutOwner(id int64) (int, error)
+	// DeleteWorkout(id int64) error
+	// GetWorkoutOwner(id int64) (int, error)
 }
 
 func (pg *PostgresWorkoutStore) CreateWorkout(workout *Workout) (*Workout, error) {
