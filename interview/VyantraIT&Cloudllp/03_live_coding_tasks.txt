@@ -1,0 +1,130 @@
+✅ Part 3: 100 Practical Live Coding Tasks
+These are realistic tasks they might ask you to perform during the interview for backend Golang developer role in real-time game systems.
+
+✅ A. Go Language Basics (15 Tasks)
+1. Implement a function to reverse a string in Go.
+2. Write a function to check if a number is a prime.
+3. Create a struct to represent a player and write a method to update their score.
+4. Parse a slice of integers and return the second highest value.
+5. Implement a Fibonacci sequence generator using recursion and iteration.
+6. Write a Go function to remove duplicate elements from a slice.
+7. Implement a map to count character frequencies in a string.
+8. Create and manipulate nested structs (e.g., Player → Inventory → Items).
+9. Write a function that accepts an interface and uses type assertion.
+10. Read input from the console and validate it as a number.
+11. Serialize and deserialize a struct using JSON.
+12. Create a custom error type and use it.
+13. Write a function with pointer receivers to modify a struct in-place.
+14. Use defer, panic, and recover in an example program.
+15. Use Go generics to implement a reusable stack or queue.
+
+✅ B. Concurrency & Channels (15 Tasks)
+16. Write a Go program that spawns 10 goroutines and waits for all to finish.
+17. Implement a producer-consumer model using goroutines and channels.
+18. Create a concurrent counter with sync.Mutex.
+19. Demonstrate a deadlock scenario and fix it.
+20. Write a worker pool system using goroutines and channels.
+21. Use sync.WaitGroup to wait for multiple goroutines.
+22. Write a function that returns results from two sources, whichever is faster.
+23. Create a program that times out using select and time.After.
+24. Simulate a game tick loop that runs every 1 second.
+25. Use context.WithCancel() to stop goroutines cleanly.
+26. Build a real-time event queue using buffered channels.
+27. Simulate a leaderboard update from multiple concurrent goroutines.
+28. Build a chat message broadcaster using goroutines and channels.
+29. Implement rate limiting using a time.Ticker.
+30. Create a concurrent matchmaking engine.
+
+✅ C. Web & API Tasks (15 Tasks)
+31. Build a basic REST API with net/http.
+32. Create a login API with hardcoded credentials.
+33. Accept a JSON payload and store it in memory.
+34. Implement a simple middleware to log each request.
+35. Build an API to register a player and assign a random ID.
+36. Create a leaderboard API that sorts players by score.
+37. Build a health check endpoint (/healthz).
+38. Write an endpoint that simulates a turn in a board game.
+39. Create an endpoint that accepts file uploads.
+40. Implement a basic JWT authentication system.
+41. Secure an API route with middleware.
+42. Add rate limiting to an API endpoint.
+43. Implement pagination on an API that returns 1000 records.
+44. Write an endpoint to start a new multiplayer match.
+45. Build an API to return player stats in JSON format.
+
+✅ D. Redis Tasks (10 Tasks)
+46. Connect to Redis and store a key-value pair.
+47. Set a key with TTL and verify expiration.
+48. Build a caching layer for leaderboard data using Redis.
+49. Implement Redis-based rate limiter.
+50. Use Redis Pub/Sub to simulate real-time chat between players.
+51. Store and retrieve player session data in Redis.
+52. Create a Redis-based matchmaking queue.
+53. Implement Redis-backed event logging for matches.
+54. Use Redis lists to simulate a turn queue.
+55. Use Go Redis client to update a key atomically.
+
+✅ E. Database (PostgreSQL/CockroachDB) Tasks (10 Tasks)
+56. Connect to a CockroachDB/PostgreSQL instance from Go.
+57. Create a table for storing user profiles.
+58. Write a query to fetch top 5 players by score.
+59. Perform a transaction with rollback on error.
+60. Use gorm to define models and run auto migrations.
+61. Write a CRUD API using GORM or database/sql.
+62. Build a schema for storing multiplayer match results.
+63. Implement a query with JOIN between users and matches.
+64. Write code to paginate SQL results.
+65. Create indexes to optimize leaderboard queries.
+
+✅ F. Game Logic / Real-Time Simulation Tasks (15 Tasks)
+66. Write a Go function to simulate a dice roll (1–6).
+67. Build turn-based logic for a 2-player game.
+68. Detect a win condition in a Tic Tac Toe board.
+69. Create a game loop that ticks every second and updates state.
+70. Write a function that calculates score based on player actions.
+71. Simulate a simple Ludo-like player movement.
+72. Generate random positions on a board and assign items.
+73. Build logic to handle player reconnects in a match.
+74. Implement timeout logic for inactive players.
+75. Build a mini state machine for a turn-based game.
+76. Write a function to assign players to random rooms.
+77. Simulate collision detection logic.
+78. Build a function to balance matchmaking by skill level.
+79. Simulate power-up logic in a game.
+80. Simulate a leaderboard refresh based on batch updates.
+
+✅ G. Testing, Debugging, Utilities (10 Tasks)
+81. Write unit tests for a function that calculates player score.
+82. Write table-driven tests for an API.
+83. Use httptest to test an HTTP handler.
+84. Mock Redis or SQL responses in a test.
+85. Profile a Go program for memory usage.
+86. Use pprof to analyze performance bottlenecks.
+87. Simulate a flaky API and write retry logic.
+88. Debug a race condition with -race flag.
+89. Write a script to seed mock player data.
+90. Write a utility to generate 100 fake users.
+
+✅ H. Real-World Scenarios (10 Tasks)
+91. Design a scalable backend for a 1000-player chess tournament.
+92. Implement webhook handling and validation in Go.
+93. Design and implement a rate-limited notification system.
+94. Simulate 50,000 concurrent player joins using goroutines.
+95. Write a service that matches players in real time and sends them to game rooms.
+96. Design a system to store and retrieve match replays.
+97. Build a snapshotting system to save game state every 30 seconds.
+98. Create a dashboard API that aggregates player stats in real time.
+99. Build a real-time "online players" tracker using WebSockets.
+100. Build a small CLI tool in Go to test API endpoints.
+
+🎯 Study Tips for Live Coding:
+- Practice coding without IDE assistance (basic text editor)
+- Focus on clean, readable code with proper error handling
+- Think out loud - explain your approach while coding
+- Start with a simple solution, then optimize
+- Handle edge cases and validate inputs
+- Be ready to discuss time/space complexity
+- Practice debugging on the spot
+- Know common Go patterns and idioms
+- Prepare for follow-up questions about scaling and performance
+- Practice tasks 1-30 daily for fundamental skills

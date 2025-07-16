@@ -1,0 +1,128 @@
+✅ Part 2: 100 Technical Interview Questions
+Tailored to backend Golang developer role at Vyantra IT & Cloud LLP, with focus on real-time game logic, scalable APIs, concurrency, Redis, CockroachDB, and clean code.
+
+✅ A. Golang Fundamentals (20 Questions)
+1. What are the differences between arrays and slices in Go?
+2. How does the make function work in Go?
+3. What is the zero value of a struct field in Go?
+4. What is the difference between var, :=, and new()?
+5. How are pointers used in Go?
+6. How do you define and use an interface in Go?
+7. What is the difference between nil and empty values in Go?
+8. How do you prevent a nil pointer dereference?
+9. What is a map in Go, and how do you iterate over it?
+10. How do you create and use a custom struct in Go?
+11. How does Go handle memory management and garbage collection?
+12. Explain method receivers: value vs pointer receiver.
+13. What are panic and recover used for in Go?
+14. How do you organize code into packages in Go?
+15. What is the purpose of init() function in a Go package?
+16. What are Go modules? How do you manage dependencies?
+17. What is the purpose of the defer keyword?
+18. What is type assertion and type switch in Go?
+19. How does Go compare to other backend languages you've used?
+20. What is an empty interface and when should you use it?
+
+✅ B. Concurrency & Real-time Programming (20 Questions)
+21. What are goroutines and how are they different from threads?
+22. How do channels work in Go?
+23. What is the difference between buffered and unbuffered channels?
+24. How do you handle timeouts in channels?
+25. What is the select statement and when would you use it?
+26. How can you prevent goroutine leaks?
+27. What are race conditions and how do you avoid them in Go?
+28. How do you use sync.Mutex in a concurrent program?
+29. What is the sync.WaitGroup and how do you use it?
+30. What is a worker pool in Go and how would you implement one?
+31. How do you manage shared resources in concurrent code?
+32. How would you build a concurrent matchmaking system in Go?
+33. Can you explain Go's memory model and visibility guarantees?
+34. How would you implement a real-time multiplayer game loop in Go?
+35. How would you broadcast real-time game state to players?
+36. What is a tick-based system, and how is it used in games?
+37. How would you keep multiple players in sync in a real-time match?
+38. What strategies would you use to reduce latency in a Go-based game server?
+39. How would you monitor and restart stuck goroutines?
+40. How do you simulate concurrency in unit tests?
+
+✅ C. Web Development & API Design (15 Questions)
+41. How do you create a REST API using Go's standard library?
+42. What is the difference between http.HandleFunc and http.Handler?
+43. How do you handle middleware in Go?
+44. How do you parse and validate incoming JSON payloads?
+45. What is the role of context (context.Context) in Go HTTP servers?
+46. How do you handle graceful shutdown of an API server?
+47. What are best practices for structuring a Go-based web service?
+48. How do you manage environment variables in Go apps?
+49. How do you implement user authentication in Go?
+50. How do you log requests and errors in Go web applications?
+51. What are common HTTP status codes you use in APIs?
+52. How do you make outbound API requests from Go?
+53. What frameworks have you used in Go? (Gin, Echo, etc.)
+54. How do you implement rate limiting in a Go API?
+55. How would you implement a leaderboard API for a multiplayer game?
+
+✅ D. Redis & Pub/Sub Systems (10 Questions)
+56. What is Redis and why is it used in real-time systems?
+57. How do you connect to Redis in Go?
+58. What are common Redis data structures you've used?
+59. How does Redis Pub/Sub work?
+60. How would you use Redis for matchmaking in a game?
+61. How do you expire a cache in Redis?
+62. How do you use Redis to handle concurrent access to a key?
+63. What is the difference between Redis and a relational database?
+64. How would you implement a job queue using Redis in Go?
+65. How do you debug a Redis-based caching issue?
+
+✅ E. CockroachDB / SQL / Persistence (10 Questions)
+66. What is CockroachDB and how is it different from PostgreSQL?
+67. How do you connect to a SQL database in Go?
+68. What ORMs or SQL libraries have you used (sqlx, gorm, etc.)?
+69. How do you perform transactions in Go?
+70. How do you prevent SQL injection in Go?
+71. How do you structure your models and schema in Go?
+72. What is ACID compliance and why does it matter?
+73. How would you design the schema for a multiplayer game session?
+74. How do you implement optimistic locking in SQL?
+75. How would you scale database reads in a game backend?
+
+✅ F. Game Logic & Backend Systems (10 Questions)
+76. How would you design a matchmaking system for 1v1 games?
+77. How would you sync player states in real time?
+78. What happens when a player disconnects mid-game?
+79. How would you implement game replay or session logging?
+80. What backend challenges arise in turn-based games?
+81. How do you ensure fairness and anti-cheat in game logic?
+82. How do you manage player inventory/state between sessions?
+83. How would you prevent abuse of APIs in real-money games?
+84. How do you persist game state between servers or restarts?
+85. What's your approach to deterministic game state logic?
+
+✅ G. Testing, Debugging & Deployment (10 Questions)
+86. How do you write unit tests in Go?
+87. What is a table-driven test in Go?
+88. How do you test concurrent code?
+89. How do you mock a database or external API in Go?
+90. What testing tools do you use in Go (testify, httptest, etc.)?
+91. How do you profile and optimize Go performance?
+92. How do you find and fix memory leaks in Go?
+93. How do you manage logging in production vs development?
+94. How do you deploy a Go app to a cloud server (manual or CI/CD)?
+95. What tools do you use to monitor backend performance?
+
+✅ H. Miscellaneous (5 Questions)
+96. What is a monolith vs microservice? Which is better for game servers?
+97. How do you handle versioning of APIs?
+98. What is gRPC and how does it compare to REST?
+99. How do you ensure backwards compatibility in a deployed game server?
+100. If we asked you to build a leaderboard with 10M users, how would you approach it?
+
+🎯 Study Tips for Technical Questions:
+- Master Go fundamentals first (questions 1-20)
+- Focus heavily on concurrency (questions 21-40) - critical for game backends
+- Practice API design patterns (questions 41-55)
+- Understand caching and database concepts (questions 56-75)
+- Study game-specific backend challenges (questions 76-85)
+- Learn testing and deployment best practices (questions 86-95)
+- Be ready to discuss trade-offs and scaling strategies
+- Practice explaining complex concepts in simple terms

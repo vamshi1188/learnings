@@ -1,0 +1,130 @@
+✅ Part 1: 100 General Interview Questions
+These are grouped by themes such as personal background, behavioral, team fit, goals, etc.
+
+👤 Personal Background (10 Questions)
+1. Tell me about yourself.
+2. Walk me through your resume.
+3. Why did you choose software development as a career?
+4. Why Golang?
+5. What attracted you to game development?
+6. What motivates you daily?
+7. What do you enjoy doing outside work?
+8. How do you stay up to date with tech?
+9. Tell me about a proud moment in your career.
+10. What's something not on your resume that we should know?
+
+🧠 Company/Role Fit (10 Questions)
+11. Why do you want to work at Vyantra?
+12. What do you know about our company?
+13. What excites you about this role?
+14. What do you expect from your first 6 months here?
+15. Which of our products stood out to you and why?
+16. How do you think you'll contribute to our mission?
+17. How do you relate to our vision of building immersive experiences?
+18. What makes you suitable for a game dev company?
+19. How do you see this role helping your career growth?
+20. What makes this opportunity different from your last job?
+
+🛠️ Work Style & Ethics (10 Questions)
+21. Are you more of a team player or independent contributor?
+22. Describe your ideal work environment.
+23. How do you prioritize tasks in a fast-paced setting?
+24. How do you manage multiple deadlines?
+25. Have you worked under pressure?
+26. How do you handle feedback?
+27. What's your approach to debugging and resolving issues?
+28. Are you comfortable working on-site in Bhopal?
+29. Are you open to flexible hours if needed for game launches?
+30. What do you do when you get stuck on a task?
+
+🧠 Behavioral Questions (10 Questions)
+31. Tell me about a time you made a mistake and how you handled it.
+32. Describe a time when you led a project.
+33. Tell me about a conflict with a colleague and how you resolved it.
+34. Describe a time you solved a tough bug.
+35. When did you go above and beyond at work?
+36. Describe a difficult feedback you received.
+37. How do you deal with vague requirements?
+38. What do you do when a teammate isn't pulling their weight?
+39. How do you handle last-minute feature requests?
+40. Tell me about a time you had to learn something new quickly.
+
+🎯 Goal-Oriented Questions (10 Questions)
+41. Where do you see yourself in 2 years?
+42. What are your short-term career goals?
+43. What's your dream project?
+44. What skills are you currently working on?
+45. What does success look like to you?
+46. Do you prefer to specialize or become a generalist?
+47. Would you consider a leadership role in the future?
+48. What is your next learning goal in Golang?
+49. Are you open to working across domains (AI, cloud, etc.)?
+50. What's a tech topic you'd love to master?
+
+📚 Learning & Improvement (10 Questions)
+51. What was the last book or article you read about technology?
+52. Do you follow any YouTube channels or blogs for Go or gaming dev?
+53. How do you approach learning a new language or tool?
+54. What is your learning routine like?
+55. Do you contribute to open source? Why/why not?
+56. Have you attended any developer conferences or hackathons?
+57. Who are your developer role models?
+58. What's your GitHub or portfolio URL?
+59. How do you keep track of your projects and progress?
+60. Do you maintain a daily or weekly coding schedule?
+
+📈 Work History & Experience (10 Questions)
+61. What was your previous role like?
+62. What tech stack did you work with?
+63. How many people were in your last team?
+64. What game logic or real-time experience do you have?
+65. How did you ensure backend performance in your past work?
+66. Have you written unit tests and integration tests?
+67. Have you worked on production systems?
+68. What kind of APIs have you built?
+69. How did you deploy and monitor your backend services?
+70. Have you handled concurrency issues in the past?
+
+⚙️ Adaptability (10 Questions)
+71. How quickly can you ramp up in a new codebase?
+72. Do you prefer startups or large companies? Why?
+73. How do you deal with changing project scopes?
+74. What's the biggest challenge you've overcome recently?
+75. Have you worked in Agile or Scrum environments?
+76. How do you handle documentation in your projects?
+77. Would you be willing to learn a new language or framework if required?
+78. How would you handle joining a team where you're the most junior?
+79. How do you onboard yourself to a new codebase?
+80. What is your strategy when switching between tasks?
+
+🧩 Culture Fit (10 Questions)
+81. What kind of team do you thrive in?
+82. How do you support your teammates?
+83. How would your teammates describe you?
+84. What do you think makes a game dev team successful?
+85. Are you open to mentoring others in the future?
+86. How do you deal with creative differences?
+87. What's your attitude toward pair programming or code reviews?
+88. What excites you most about building backend systems for games?
+89. Do you follow gaming or dev communities on Reddit, Discord, etc.?
+90. How do you keep your work-life balance?
+
+🧾 Logistics & Final Questions (10 Questions)
+91. What's your current CTC?
+92. What's your expected salary?
+93. What is your notice period?
+94. Are you willing to relocate or already in Bhopal?
+95. When can you start?
+96. Do you have side projects we can look at?
+97. Would you be open to a technical test or assignment?
+98. Do you have any offers in hand?
+99. What are your salary expectations 1 year from now?
+100. Do you have any questions for us?
+
+🎯 Study Tips for General Questions:
+- Practice storytelling for behavioral questions (STAR method)
+- Research Vyantra IT & Cloud LLP thoroughly before the interview
+- Prepare specific examples from your experience
+- Be honest about your strengths and areas for improvement
+- Show enthusiasm for game development and the company's mission
+- Have thoughtful questions ready about the role and company culture
