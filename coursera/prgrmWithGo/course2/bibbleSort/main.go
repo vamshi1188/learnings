@@ -4,7 +4,7 @@ import (
 	"bufio"
 	"fmt"
 	"os"
-	"sort"
+
 	"strconv"
 )
 
@@ -33,30 +33,28 @@ func main() {
 	}
 	fmt.Println("Numbers you entered:", numbers)
 
-	// BubbleSort(numbers)
-
-	sort.Ints(numbers)
+	BubbleSort(numbers)
 
 	fmt.Println("Numbers sorted :", numbers)
 
 }
 
-// func BubbleSort(a []int) {
+func BubbleSort(a []int) {
 
-// 	for j := 0; j < len(a)-1; j++ {
+	for j := 0; j < len(a)-1; j++ {
 
-// 		for i := range a {
+		for i := range a {
 
-// 			if i < len(a)-1 {
-// 				if a[i] > a[i+1] {
+			if i < len(a)-1 {
+				if a[i] > a[i+1] {
 
-// 					Swap(a, i)
+					Swap(a, i)
 
-// 				}
-// 			}
-// 		}
-// 	}
-// }
-// func Swap(a []int, i int) {
-// 	a[i], a[i+1] = a[i+1], a[i]
-// }
+				}
+			}
+		}
+	}
+}
+func Swap(a []int, i int) {
+	a[i], a[i+1] = a[i+1], a[i]
+}
