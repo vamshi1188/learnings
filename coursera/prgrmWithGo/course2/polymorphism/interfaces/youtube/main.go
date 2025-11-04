@@ -2,26 +2,35 @@ package main
 
 import "fmt"
 
-type Shape interface {
+type shape interface {
+	ShapeName() string
+}
+type perimeter interface {
 	Area() float64
 }
+
+type Geometry interface {
+	shape
+	perimeter
+}
+
 type Rectangle struct {
 	width  float64
 	height float64
+	name   string
 }
 
-func (r Rectangle) Area() float64 {
-
-	return r.width * r.height
-
+func (s Rectangle) Area() float64 {
+	return s.width * s.height
 }
 
-func Calculation(s Shape) float64 {
-	return s.Area()
+func (d Rectangle) ShapeName() string {
+	return d.name
 }
 
 func main() {
-	rect := Rectangle{width: 5, height: 4}
+	var g Geometry
 
-	fmt.Println(Calculation(rect))
+	g = Rectangle{width: 5, height: 3, name: "Rectangle"}
+	fmt.Println(g.Area(), g.ShapeName())
 }
