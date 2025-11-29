@@ -24,5 +24,9 @@ func main() {
 	if err != nil {
 		log.Fatal("error in connecting database", err)
 	}
-	err = OrderRepository.InsertValues()
+	err = OrderRepository.DeleteData()
+	if err != nil {
+		log.Fatal("error in inserting data in table ", err)
+	}
+
 }
