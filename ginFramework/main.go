@@ -1,7 +1,6 @@
 package main
 
 import (
-	"log"
 	"net/http"
 
 	"github.com/gin-gonic/gin"
@@ -9,16 +8,40 @@ import (
 
 func main() {
 
-	r := gin.Default()
+	router := gin.Default()
 
-	r.GET("/ping", func(c *gin.Context) {
+	router.GET("/ping", func(c *gin.Context) {
 		c.JSON(http.StatusOK, gin.H{
 			"message ": "success",
 		})
 	})
 
-	err := r.Run(":8080")
-	if err != nil {
-		log.Fatal("error in  running server on port 8080", err)
-	}
+	router.GET("/me/:id", func(c *gin.Context) {
+
+		var id = c.Param("id")
+		c.JSON(http.StatusOK, gin.H{
+			"user_id": id,
+		})
+	})
+
+	router.POST("/me", func(c *gin.Context) {
+
+		type meREQUEST struct {
+			Email    string `json:"email"`
+			Password string `json:"password"`
+		}
+
+		var meRequest meREQUEST
+
+		c.BindJSON(&meRequest)
+
+		c.JSON(http.StatusOK, gin.H{
+			"email":    meRequest.Email,
+			"password": meRequest.Password,
+		})
+
+	})
+
+	router.Run(":8080")
+
 }
