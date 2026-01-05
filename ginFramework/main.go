@@ -27,18 +27,29 @@ func main() {
 	router.POST("/me", func(c *gin.Context) {
 
 		type meREQUEST struct {
-			Email    string `json:"email"`
+			Email    string `json:"email" binding:"required"`
 			Password string `json:"password"`
 		}
 
 		var meRequest meREQUEST
 
-		c.BindJSON(&meRequest)
+		err := c.BindJSON(&meRequest)
+
+		if err != nil {
+
+			c.JSON(http.StatusBadRequest, gin.H{
+				"error": err.Error(),
+			})
+		}
 
 		c.JSON(http.StatusOK, gin.H{
 			"email":    meRequest.Email,
 			"password": meRequest.Password,
 		})
+
+	})
+
+	router.GET("/name", func(c *gin.Context) {
 
 	})
 
