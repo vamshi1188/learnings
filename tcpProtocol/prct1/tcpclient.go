@@ -1,9 +1,11 @@
 package main
 
 import (
+	"bufio"
 	"fmt"
 	"net"
 	"os"
+	"strings"
 )
 
 func main() {
@@ -23,5 +25,16 @@ func main() {
 		return
 	}
 	defer c.Close()
+
+	for {
+		reader := bufio.NewReader(os.Stdin)
+		fmt.Print(">> ")
+		text, _ := reader.ReadString('\n')
+		fmt.Fprintf(c, text)
+		if strings.TrimSpace(text) == "stop" {
+			fmt.Println("client exiting.....")
+			return
+		}
+	}
 
 }
