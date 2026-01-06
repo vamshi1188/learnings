@@ -2,21 +2,12 @@ package main
 
 import (
 	"database/sql"
-	"fmt"
 	"log"
+	"webserver/database"
 
+	"github.com/gin-gonic/gin"
 	_ "github.com/lib/pq"
 )
-
-type VehicleDatabase struct {
-	DB *sql.DB
-}
-type VehiclesTable struct {
-	id            int
-	vehicleNumber string
-	vehicleType   string
-	ownerName     string
-}
 
 func main() {
 
@@ -34,49 +25,22 @@ func main() {
 	}
 	defer dbConnection.Close()
 
-	vehicleDB := &VehicleDatabase{DB: dbConnection}
+	vehicleDB := &database.VehicleDatabase{DB: dbConnection}
 
-	vehicles, err := vehicleDB.GetVehicles()
-	if err != nil {
-		log.Fatal(err)
-	}
+	router := gin.Default()
 
-	for _, v := range vehicles {
+	router.GET("/vehicles", func(c *gin.Context) {
 
-		fmt.Println(v)
-	}
-
-}
-
-func (r *VehicleDatabase) GetVehicles() ([]VehiclesTable, error) {
-
-	rows, err := r.DB.Query(`SELECT id, vehicle_number, vehicle_type, owner_name
-		FROM vehicles`)
-
-	if err != nil {
-		return nil, err
-	}
-	defer rows.Close()
-
-	var vehiclesData1 []VehiclesTable
-
-	for rows.Next() {
-
-		var v VehiclesTable
-
-		err := rows.Scan(&v.id, &v.vehicleNumber, &v.vehicleType, &v.ownerName)
+		vehicles, err := vehicleDB.FetchVehicles()
 		if err != nil {
-
-			return nil, err
+			c.JSON(500, gin.H{
+				"error": err.Error(),
+			})
 		}
 
-		vehiclesData1 = append(vehiclesData1, v)
+		c.JSON(200, vehicles)
+	})
 
-	}
-	err = rows.Err()
-	if err != nil {
-		return nil, err
-	}
-	return vehiclesData1, nil
+	router.Run(":8080")
 
 }
