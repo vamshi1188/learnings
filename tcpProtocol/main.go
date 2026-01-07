@@ -1,27 +1,43 @@
 package main
 
 import (
+	"bufio"
 	"fmt"
 	"net"
-	"os"
 )
 
 func main() {
 
-	arguments := os.Args
-
-	if len(arguments) == 1 {
-		fmt.Println("provide port Usage: go run main.go <port>")
-		return
-	}
-	connect := arguments[1]
-
-	c, err := net.Dial("tcp", connect)
-
+	listener, err := net.Listen("tcp", ":2121")
 	if err != nil {
-		fmt.Println("failed to connect: ", connect)
+		fmt.Println("failed to open tcp connection", err)
 		return
 	}
-	defer c.Close()
 
+	defer listener.Close()
+
+	for {
+		c, err := listener.Accept()
+
+		if err != nil {
+			fmt.Println("failed to accept the incoming connection", err)
+			return
+		}
+		fmt.Println(c.RemoteAddr())
+		ReadData(c)
+
+	}
+
+}
+
+func ReadData(conn net.Conn) {
+	defer conn.Close()
+
+	for {
+		reader := bufio.NewReader(conn)
+
+		text, _ := reader.ReadBytes(byte('\n'))
+
+		fmt.Print(string(text))
+	}
 }
